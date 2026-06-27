@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Mascot from "@/components/Mascot";
 import EnquiryForm from "@/components/EnquiryForm";
+import FAQAccordion from "@/components/FAQAccordion";
 
 export default function Home() {
   // Stats numbers state for animation
@@ -497,32 +498,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-6">
-            <div className="playful-card border-4 border-indigo-200 rounded-[32px] p-6 bg-white shadow-sm text-left">
-              <h3 className="font-header text-xl font-bold text-indigo-950 mb-2">What are the school timings?</h3>
-              <p className="text-slate-600 font-medium">Our regular school hours are from 8:00 AM to 2:30 PM, Monday through Friday. We also offer extended day care until 5:00 PM for working parents.</p>
-            </div>
-            
-            <div className="playful-card border-4 border-pink-200 rounded-[32px] p-6 bg-white shadow-sm text-left">
-              <h3 className="font-header text-xl font-bold text-indigo-950 mb-2">Do you provide transportation?</h3>
-              <p className="text-slate-600 font-medium">Yes! We have a fleet of safe, GPS-tracked buses covering most major routes in the city. Each bus has a dedicated attendant.</p>
-            </div>
-
-            <div className="playful-card border-4 border-yellow-200 rounded-[32px] p-6 bg-white shadow-sm text-left">
-              <h3 className="font-header text-xl font-bold text-indigo-950 mb-2">What is the student-teacher ratio?</h3>
-              <p className="text-slate-600 font-medium">We maintain a strict 15:1 student-to-teacher ratio to ensure personalized attention and optimal learning for every child.</p>
-            </div>
-
-            <div className="playful-card border-4 border-emerald-200 rounded-[32px] p-6 bg-white shadow-sm text-left">
-              <h3 className="font-header text-xl font-bold text-indigo-950 mb-2">What extracurricular activities do you offer?</h3>
-              <p className="text-slate-600 font-medium">We offer a wide range of activities including arts & crafts, robotics, music, dance, and various sports like basketball, football, and skating to foster holistic development.</p>
-            </div>
-
-            <div className="playful-card border-4 border-purple-200 rounded-[32px] p-6 bg-white shadow-sm text-left">
-              <h3 className="font-header text-xl font-bold text-indigo-950 mb-2">How can I apply for admission?</h3>
-              <p className="text-slate-600 font-medium">You can start the process by clicking the "Explore Admissions" button in the hero section, or by filling out the inquiry form in the Admissions section below. We will then schedule a campus tour for you!</p>
-            </div>
-          </div>
+          <FAQAccordion />
         </div>
       </section>
 
