@@ -482,10 +482,10 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col gap-3">
             <span className="text-sky-500 text-lg font-bold tracking-widest uppercase">Contact Us</span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-indigo-950">
-              Visit Our Launchpad! 📍
+              Get in Touch With Us
             </h2>
             <p className="text-slate-600 font-medium">
-              Find our physical address below or send an email. We are always happy to welcome new explorers!
+              Whether you're exploring admissions or planning a campus visit, our team is here to provide the information and support you need.
             </p>
           </div>
 
