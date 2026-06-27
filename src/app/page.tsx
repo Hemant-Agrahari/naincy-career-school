@@ -162,7 +162,7 @@ export default function Home() {
   };
 
   return (
-    <div className="w-full relative">
+    <div className="w-full relative overflow-x-hidden">
       {/* Schema structured data for SEO */}
       <script
         type="application/ld+json"
