@@ -551,6 +551,18 @@ export default function Home() {
 
           </div>
 
+          {/* Real Interactive Google Map - Full Width */}
+          <div className="mt-12 w-full rounded-[32px] overflow-hidden border-4 border-slate-200 shadow-md h-[400px]">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110543.0850239644!2d79.37894200632349!3d29.382877960350757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0a1bc28fd9d61%3A0x7cae7ba916987db3!2sNainital%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1714545021200!5m2!1sen!2sin" 
+              className="w-full h-full border-0" 
+              allowFullScreen={false} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Naincy Career School Location Map"
+            ></iframe>
+          </div>
+
         </div>
       </section>
 
