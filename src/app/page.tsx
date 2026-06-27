@@ -247,6 +247,7 @@ export default function Home() {
                 src="/hero-mascot.png"
                 alt="Cute School Book and Pencil Mascot"
                 fill
+                sizes="(max-width: 640px) 260px, 320px"
                 className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300 cursor-pointer"
                 priority
               />
