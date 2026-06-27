@@ -30,9 +30,11 @@ export default function TestimonialCarousel() {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  // Optional: Auto-play
+  // Auto-play interval
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 3000); // 3 seconds
     return () => clearInterval(interval);
   }, []);
 
