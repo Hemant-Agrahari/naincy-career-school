@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+:root {
+  /* Vibrant & Soft Palette (Kid-Friendly but Premium) */
+  --primary-violet: #6366f1;
+  --primary-violet-hover: #4f46e5;
+  --accent-coral: #fb7185;
+  --accent-coral-hover: #f43f5e;
+  --sunny-yellow: #fcd34d;
+  --sky-blue: #38bdf8;
+  --mint-green: #34d399;
+  
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  
+  /* Fonts */
+  --font-header: var(--font-fredoka), system-ui, sans-serif;
+  --font-body: var(--font-quicksand), system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Custom Playful Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sky-blue);
+  border-radius: 6px;
+  border: 3px solid #f1f5f9;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-violet);
+}
+
+/* Keyframe Animations */
+
+/* Wing Flapping */
+@keyframes left-wing-flap {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-15deg); }
+}
+
+@keyframes right-wing-flap {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg); }
+}
+
+/* Eye Blinking */
+@keyframes eye-blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+/* Tassel Swinging */
+@keyframes tassel-swing {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-8deg); }
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Floating Clouds/Bubbles */
+@keyframes drift-left-right {
+  0% { transform: translateX(-10%); opacity: 0; }
+  10%, 90% { opacity: 0.8; }
+  100% { transform: translateX(110%); opacity: 0; }
+}
+
+/* Bouncy hover shadow */
+.playful-card {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.playful-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Buttons with tactile feedback */
+.playful-btn {
+  font-family: var(--font-header);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  box-shadow: 0 4px 0 0 rgba(0,0,0,0.15);
+}
+.playful-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 0 rgba(0,0,0,0.15);
+}
+.playful-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.15);
+}
+
+/* Custom Animation classes for global layout */
+.animate-left-wing {
+  animation: left-wing-flap 3s ease-in-out infinite;
+}
+.animate-right-wing {
+  animation: right-wing-flap 3s ease-in-out infinite;
+}
+.animate-eye-blink {
+  animation: eye-blink 5s ease-in-out infinite;
+}
+.animate-tassel-swing {
+  animation: tassel-swing 4s ease-in-out infinite;
+}
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-float-medium {
+  animation: float 4s ease-in-out infinite;
+}
+.animate-float-fast {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Background elements styling */
+.playful-blob {
+  position: absolute;
+  filter: blur(40px);
+  z-index: 0;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Board Game Path Styles for Academics */
+.game-path {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .game-path {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100' viewBox='0 0 1000 100' fill='none'%3E%3Cpath d='M 100,50 C 250,-10 400,110 550,50 C 700,-10 850,110 950,50' stroke='%23a5b4fc' stroke-width='6' stroke-dasharray='10, 15' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+  }
+}
