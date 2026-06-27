@@ -5,6 +5,7 @@ import Image from "next/image";
 import Mascot from "@/components/Mascot";
 import EnquiryForm from "@/components/EnquiryForm";
 import FAQAccordion from "@/components/FAQAccordion";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 
 export default function Home() {
   // Stats numbers state for animation
@@ -121,19 +122,6 @@ export default function Home() {
       desc: "Focus on customized career paths. Earn project-based credits, university preparation, and leadership certifications.",
       color: "bg-indigo-100 border-indigo-400 text-indigo-900",
       btnColor: "bg-indigo-500 hover:bg-indigo-600",
-    },
-  ];
-
-  const testimonials = [
-    {
-      quote: "Naincy Career School changed how my son thinks about learning! He doesn't just study for exams; he spends hours designing coding puzzles. He loves it here!",
-      author: "Sarah J. (Mother of Grade 5 Pupil)",
-      icon: "👩‍👦",
-    },
-    {
-      quote: "The combination of hands-on space laboratories and solid core subjects is fantastic. The teachers encourage curiosity and treat every student like an explorer.",
-      author: "Dr. David L. (Father of Grade 8 Student)",
-      icon: "👨‍🔬",
     },
   ];
 
@@ -466,22 +454,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((test, idx) => (
-              <div
-                key={idx}
-                className="playful-card border-4 border-yellow-300 rounded-[32px] p-8 bg-amber-50/30 flex flex-col justify-between shadow-sm"
-              >
-                <div className="text-3xl mb-4">{test.icon}</div>
-                <p className="text-slate-700 font-body font-medium italic leading-relaxed text-sm">
-                  "{test.quote}"
-                </p>
-                <div className="mt-6 border-t border-yellow-200 pt-4">
-                  <h4 className="font-header text-sm font-bold text-indigo-950">{test.author}</h4>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TestimonialCarousel />
         </div>
       </section>
 
