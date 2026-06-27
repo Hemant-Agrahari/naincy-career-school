@@ -42,8 +42,9 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${fredoka.variable} ${quicksand.variable} h-full scroll-smooth`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 antialiased font-body">
+      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 antialiased font-body" suppressHydrationWarning>
         <Navbar />
         <main className="flex-1 flex flex-col">{children}</main>
         <Footer />
