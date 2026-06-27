@@ -33,13 +33,15 @@ export default function TestimonialCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsToShow, setItemsToShow] = useState(3);
 
-  // Responsive layout: 3 items on desktop, 1 on mobile
+  // Responsive layout: 3 on desktop, 2 on tablet, 1 on mobile
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setItemsToShow(1);
+        setItemsToShow(1); // Mobile
+      } else if (window.innerWidth < 1024) {
+        setItemsToShow(2); // Tablet
       } else {
-        setItemsToShow(3);
+        setItemsToShow(3); // Desktop
       }
     };
     
