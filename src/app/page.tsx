@@ -204,12 +204,12 @@ export default function Home() {
             </div>
             
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight text-indigo-950">
-              Where Big Dreams <br />
-              <span className="text-pink-500 underline decoration-yellow-400 decoration-wavy">Take Off! 🚀</span>
+              Learning Today, <br />
+              <span className="text-pink-500 underline decoration-yellow-400 decoration-wavy">Leading Tomorrow! 🌈</span>
             </h1>
             
             <p className="text-lg sm:text-xl text-slate-600 max-w-xl mx-auto lg:mx-0 font-medium">
-              We connect core science and letters with fun, hands-on career quests! Help your children discover their passions and fly high as future leaders.
+              At Naincy Career School, we combine quality education, creativity, and real-world experiences to help children become confident learners and responsible future leaders.
             </p>
 
             <div className="bg-indigo-50 border-2 border-indigo-200 rounded-2xl px-5 py-3 text-slate-700 font-header font-bold text-center lg:text-left self-center lg:self-start flex items-center gap-3 animate-float-medium w-fit">
