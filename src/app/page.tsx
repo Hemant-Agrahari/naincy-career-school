@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Mascot from "@/components/Mascot";
 import EnquiryForm from "@/components/EnquiryForm";
 
@@ -241,10 +242,16 @@ export default function Home() {
             <div className="absolute w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] bg-gradient-to-tr from-pink-300 via-yellow-200 to-sky-300 rounded-[50px] rotate-6 opacity-30 animate-pulse-slow"></div>
             <div className="absolute w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] bg-gradient-to-bl from-indigo-300 via-sky-200 to-rose-200 rounded-[50px] -rotate-6 opacity-35"></div>
             
-            <div className="relative animate-float-slow">
-              <Mascot width={240} height={240} className="sm:w-[300px] sm:h-[300px]" />
+            <div className="relative animate-float-slow w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] flex items-center justify-center">
+              <Image
+                src="/hero-mascot.png"
+                alt="Cute School Book and Pencil Mascot"
+                fill
+                className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+                priority
+              />
               {/* Fun bubble next to mascot */}
-              <div className="absolute -top-6 -right-6 bg-white border-4 border-indigo-600 text-indigo-950 font-header font-bold px-4 py-2.5 rounded-3xl shadow-lg -rotate-12">
+              <div className="absolute -top-4 -right-4 sm:-right-8 bg-white border-4 border-indigo-600 text-indigo-950 font-header font-bold px-4 py-2.5 rounded-3xl shadow-lg -rotate-12 z-10">
                 Hi! Let's explore! 👋
               </div>
             </div>
