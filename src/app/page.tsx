@@ -484,6 +484,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ SECTION */}
+      <section id="faq" className="py-24 bg-sky-50 relative border-t-8 border-sky-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <div className="text-center mb-16 flex flex-col gap-2">
+            <span className="text-sky-500 text-lg font-bold tracking-widest uppercase">FAQ</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-indigo-950">
+              Got Questions? 🤔
+            </h2>
+            <p className="text-slate-600 font-medium">
+              Find answers to the most common questions below.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <div className="playful-card border-4 border-indigo-200 rounded-[32px] p-6 bg-white shadow-sm text-left">
+              <h3 className="font-header text-xl font-bold text-indigo-950 mb-2">What are the school timings?</h3>
+              <p className="text-slate-600 font-medium">Our regular school hours are from 8:00 AM to 2:30 PM, Monday through Friday. We also offer extended day care until 5:00 PM for working parents.</p>
+            </div>
+            
+            <div className="playful-card border-4 border-pink-200 rounded-[32px] p-6 bg-white shadow-sm text-left">
+              <h3 className="font-header text-xl font-bold text-indigo-950 mb-2">Do you provide transportation?</h3>
+              <p className="text-slate-600 font-medium">Yes! We have a fleet of safe, GPS-tracked buses covering most major routes in the city. Each bus has a dedicated attendant.</p>
+            </div>
+
+            <div className="playful-card border-4 border-yellow-200 rounded-[32px] p-6 bg-white shadow-sm text-left">
+              <h3 className="font-header text-xl font-bold text-indigo-950 mb-2">What is the student-teacher ratio?</h3>
+              <p className="text-slate-600 font-medium">We maintain a strict 15:1 student-to-teacher ratio to ensure personalized attention and optimal learning for every child.</p>
+            </div>
+
+            <div className="playful-card border-4 border-emerald-200 rounded-[32px] p-6 bg-white shadow-sm text-left">
+              <h3 className="font-header text-xl font-bold text-indigo-950 mb-2">What extracurricular activities do you offer?</h3>
+              <p className="text-slate-600 font-medium">We offer a wide range of activities including arts & crafts, robotics, music, dance, and various sports like basketball, football, and skating to foster holistic development.</p>
+            </div>
+
+            <div className="playful-card border-4 border-purple-200 rounded-[32px] p-6 bg-white shadow-sm text-left">
+              <h3 className="font-header text-xl font-bold text-indigo-950 mb-2">How can I apply for admission?</h3>
+              <p className="text-slate-600 font-medium">You can start the process by clicking the "Explore Admissions" button in the hero section, or by filling out the inquiry form in the Admissions section below. We will then schedule a campus tour for you!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CONTACT MAP & INFO */}
       <section id="contact" className="py-24 bg-slate-50 relative border-t-8 border-indigo-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
