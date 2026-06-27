@@ -204,12 +204,12 @@ export default function Home() {
             </div>
             
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight text-indigo-950">
-              Learning Today, <br />
-              <span className="text-pink-500 underline decoration-yellow-400 decoration-wavy">Leading Tomorrow! 🌈</span>
+              A Place Where Every Child <br />
+              <span className="text-pink-500 underline decoration-yellow-400 decoration-wavy">Loves to Learn & Grow 🌈</span>
             </h1>
             
             <p className="text-lg sm:text-xl text-slate-600 max-w-xl mx-auto lg:mx-0 font-medium">
-              At Naincy Career School, we combine quality education, creativity, and real-world experiences to help children become confident learners and responsible future leaders.
+              From foundational learning to future-ready skills, we help children develop confidence, creativity, critical thinking, and strong values in a caring environment.
             </p>
 
             <div className="bg-indigo-50 border-2 border-indigo-200 rounded-2xl px-5 py-3 text-slate-700 font-header font-bold text-center lg:text-left self-center lg:self-start flex items-center gap-3 animate-float-medium w-fit">
@@ -222,16 +222,16 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
               <a
-                href="#careers"
+                href="#admissions"
                 className="playful-btn bg-indigo-600 hover:bg-indigo-700 text-white font-header font-bold text-lg px-8 py-4 rounded-full flex items-center justify-center gap-2"
               >
-                Start Adventure! ✨
+                🎓 Explore Admissions
               </a>
               <a
-                href="#admissions"
+                href="#contact"
                 className="playful-btn bg-yellow-400 hover:bg-yellow-500 text-indigo-950 font-header font-bold text-lg px-8 py-4 rounded-full flex items-center justify-center gap-2"
               >
-                Inquire Today 📝
+                📅 Book a School Visit
               </a>
             </div>
           </div>
