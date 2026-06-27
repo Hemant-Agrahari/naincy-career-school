@@ -22,15 +22,15 @@ export default function Home() {
     const duration = 2000; // 2 seconds
     const frameRate = 1000 / 60; // 60 fps
     const totalFrames = Math.round(duration / frameRate);
-    
+
     let frame = 0;
     const timer = setInterval(() => {
       frame++;
       const progress = frame / totalFrames;
-      
+
       // Easing out quadratic
       const easeProgress = progress * (2 - progress);
-      
+
       setCounts({
         kids: Math.floor(easeProgress * targets.kids),
         teachers: Math.floor(easeProgress * targets.teachers),
@@ -158,7 +158,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      
+
       {/* BACKGROUND FLOATING BLOBS/SHAPES */}
       <div className="playful-blob bg-indigo-400 w-96 h-96 top-20 left-10 rounded-full"></div>
       <div className="playful-blob bg-pink-400 w-80 h-80 top-96 right-20 rounded-full"></div>
@@ -166,7 +166,7 @@ export default function Home() {
 
       {/* HERO SECTION */}
       <section id="hero" className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-20 px-4 bg-gradient-to-b from-indigo-50 via-white to-slate-50 overflow-hidden">
-        
+
         {/* Floating clouds in hero */}
         <div className="absolute top-10 left-[5%] animate-float-slow opacity-60 hidden md:block">
           <svg width="120" height="80" viewBox="0 0 120 80" fill="white">
@@ -185,18 +185,18 @@ export default function Home() {
         </div>
 
         <div className="mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
-          
+
           {/* Hero text */}
           <div className="lg:col-span-7 text-center lg:text-left flex flex-col gap-6">
             <div className="inline-flex self-center lg:self-start items-center gap-2 bg-yellow-100 border-2 border-yellow-300 text-yellow-800 font-bold px-4 py-1.5 rounded-full text-sm animate-bounce">
               <span>🌟 Welcome to Naincy Career School</span>
             </div>
-            
+
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight text-indigo-950">
               A Place Where Every Child <br />
               <span className="text-pink-500 underline decoration-yellow-400 decoration-wavy">Loves to Learn & Grow 🌈</span>
             </h1>
-            
+
             <p className="text-lg sm:text-xl text-slate-600 max-w-xl mx-auto lg:mx-0 font-medium">
               From foundational learning to future-ready skills, we help children develop confidence, creativity, critical thinking, and strong values in a caring environment.
             </p>
@@ -230,7 +230,7 @@ export default function Home() {
             {/* Playful background frame */}
             <div className="absolute w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] bg-gradient-to-tr from-pink-300 via-yellow-200 to-sky-300 rounded-[50px] rotate-6 opacity-30 animate-pulse-slow"></div>
             <div className="absolute w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] bg-gradient-to-bl from-indigo-300 via-sky-200 to-rose-200 rounded-[50px] -rotate-6 opacity-35"></div>
-            
+
             <div className="relative animate-float-slow w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] flex items-center justify-center">
               <Image
                 src="/hero-mascot.png"
@@ -253,7 +253,7 @@ export default function Home() {
       {/* CURRICULUM PATHWAY SECTION */}
       <section id="academics" className="py-24 bg-white border-y-8 border-indigo-100 relative">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col gap-3">
             <span className="text-pink-500 text-lg font-bold tracking-widest uppercase">Academic Journey</span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-indigo-950">
@@ -308,7 +308,7 @@ export default function Home() {
         <div className="absolute bottom-20 left-10 text-4xl animate-bounce pointer-events-none">⭐</div>
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col gap-3">
             <span className="text-yellow-500 text-lg font-bold tracking-widest uppercase">Career Exploration</span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-indigo-950">
@@ -332,7 +332,7 @@ export default function Home() {
                 </div>
 
                 <h3 className="font-header text-lg font-bold mb-2">{card.title}</h3>
-                
+
                 <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white border text-slate-700 mb-3">
                   {card.badge}
                 </span>
@@ -351,7 +351,7 @@ export default function Home() {
       <section className="py-16 bg-indigo-600 text-white relative border-y-8 border-yellow-300">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            
+
             <div className="flex flex-col gap-1 items-center">
               <span className="text-5xl font-extrabold font-header text-yellow-300 animate-pulse">
                 {counts.kids}+
@@ -396,7 +396,7 @@ export default function Home() {
       <section className="py-24 bg-white relative">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="border-4 border-indigo-600 rounded-[40px] p-8 sm:p-12 bg-indigo-50/50 shadow-md grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            
+
             {/* Principal Quote Text */}
             <div className="md:col-span-8 flex flex-col gap-4">
               <span className="text-3xl text-indigo-600 select-none">“</span>
@@ -424,17 +424,17 @@ export default function Home() {
       <section id="admissions" className="py-24 bg-slate-50 relative border-t-8 border-indigo-100">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <div className="bg-white border-4 border-pink-400 rounded-[40px] p-8 sm:p-12 shadow-lg relative overflow-hidden">
-            
+
             {/* Sparkly graphics */}
             <div className="absolute top-0 right-0 w-24 h-24 bg-yellow-200 rounded-bl-[100px] opacity-40"></div>
             <div className="absolute bottom-0 left-0 w-16 h-16 bg-sky-200 rounded-tr-[80px] opacity-40"></div>
 
             <div className="text-center mb-8 relative z-10 flex flex-col gap-2">
               <h2 className="text-3xl sm:text-4xl font-extrabold text-indigo-950">
-                Start Your Career Adventure! 🚀
+                Begin Your Child's Learning Journey 🚀
               </h2>
               <p className="text-sm sm:text-base text-slate-600 font-medium">
-                Fill out our quick query card, and our friendly admissions owls will get back to you!
+                Fill out the enquiry form below, and our admissions team will contact you to guide you through the admission process
               </p>
             </div>
 
@@ -478,7 +478,7 @@ export default function Home() {
       {/* CONTACT MAP & INFO */}
       <section id="contact" className="py-24 bg-slate-50 relative border-t-8 border-indigo-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col gap-3">
             <span className="text-sky-500 text-lg font-bold tracking-widest uppercase">Contact Us</span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-indigo-950">
@@ -490,7 +490,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mt-12">
-            
+
             {/* Details Box */}
             <div className="lg:col-span-5 bg-white border-4 border-sky-400 rounded-[32px] p-8 flex flex-col gap-6 justify-center shadow-md">
               <div className="flex items-start gap-4">
@@ -518,7 +518,7 @@ export default function Home() {
 
             {/* Interactive Mock Map/Visual Area */}
             <div className="lg:col-span-7 bg-white border-4 border-indigo-600 rounded-[32px] overflow-hidden min-h-[300px] shadow-md relative flex items-center justify-center p-8 text-center bg-[radial-gradient(#e0e7ff_1.5px,transparent_1.5px)] [background-size:16px_16px]">
-              
+
               {/* Fun visual representing campus layout / map */}
               <div className="flex flex-col items-center gap-4 relative z-10 max-w-md">
                 <div className="w-20 h-20 bg-indigo-100 border-4 border-indigo-600 rounded-full flex items-center justify-center text-4xl animate-bounce">🏫</div>
@@ -544,11 +544,11 @@ export default function Home() {
 
           {/* Real Interactive Google Map - Full Width */}
           <div className="mt-12 w-full rounded-[32px] overflow-hidden border-4 border-slate-200 shadow-md h-[400px]">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110543.0850239644!2d79.37894200632349!3d29.382877960350757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0a1bc28fd9d61%3A0x7cae7ba916987db3!2sNainital%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1714545021200!5m2!1sen!2sin" 
-              className="w-full h-full border-0" 
-              allowFullScreen={false} 
-              loading="lazy" 
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110543.0850239644!2d79.37894200632349!3d29.382877960350757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0a1bc28fd9d61%3A0x7cae7ba916987db3!2sNainital%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1714545021200!5m2!1sen!2sin"
+              className="w-full h-full border-0"
+              allowFullScreen={false}
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Naincy Career School Location Map"
             ></iframe>
