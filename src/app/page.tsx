@@ -6,6 +6,7 @@ import Mascot from "@/components/Mascot";
 import EnquiryForm from "@/components/EnquiryForm";
 import FAQAccordion from "@/components/FAQAccordion";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
+import RevealOnScroll from "@/components/RevealOnScroll";
 
 export default function Home() {
   // Stats numbers state for animation
@@ -251,7 +252,7 @@ export default function Home() {
       </section>
 
       {/* CURRICULUM PATHWAY SECTION */}
-      <section id="academics" className="py-24 bg-white border-y-8 border-indigo-100 relative">
+      <section id="academics" className="py-24 bg-white border-y-8 border-indigo-100 relative bg-dot-pattern">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col gap-3">
@@ -267,10 +268,10 @@ export default function Home() {
           {/* Path Blocks */}
           <div className="game-path mt-12">
             {academicPaths.map((path, idx) => (
-              <div
-                key={path.level}
-                className={`playful-card border-4 border-dashed rounded-3xl p-6 ${path.color} flex flex-col flex-1 gap-4 items-center text-center max-w-xs mx-auto md:mx-0 shadow-md relative`}
-              >
+              <RevealOnScroll key={path.level} delay={idx * 150} className="flex-1 w-full flex">
+                <div
+                  className={`playful-card hover-3d-lift border-4 border-dashed rounded-3xl p-6 ${path.color} flex flex-col flex-1 gap-4 items-center text-center w-full max-w-xs mx-auto md:mx-0 shadow-md relative`}
+                >
                 {/* Number Circle Badge */}
                 <div className="absolute -top-6 w-12 h-12 bg-white border-4 border-indigo-600 text-indigo-900 rounded-full flex items-center justify-center font-header font-bold text-lg shadow-sm">
                   {idx + 1}
@@ -295,6 +296,7 @@ export default function Home() {
                   Explore Path ⚡
                 </a>
               </div>
+              </RevealOnScroll>
             ))}
           </div>
 
@@ -321,11 +323,11 @@ export default function Home() {
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mt-12">
-            {careerCards.map((card) => (
-              <div
-                key={card.title}
-                className={`playful-card border-4 rounded-[32px] p-6 ${card.color} flex flex-col items-center text-center shadow-md relative`}
-              >
+            {careerCards.map((card, idx) => (
+              <RevealOnScroll key={card.title} delay={idx * 100}>
+                <div
+                  className={`playful-card hover-3d-lift h-full border-4 rounded-[32px] p-6 ${card.color} flex flex-col items-center text-center shadow-md relative`}
+                >
                 {/* Large Emoji Circle */}
                 <div className={`w-16 h-16 rounded-2xl ${card.accent} flex items-center justify-center text-3xl shadow-sm text-white mb-4`}>
                   {card.emoji}
@@ -341,6 +343,7 @@ export default function Home() {
                   {card.description}
                 </p>
               </div>
+              </RevealOnScroll>
             ))}
           </div>
 
@@ -476,7 +479,7 @@ export default function Home() {
       </section>
 
       {/* CONTACT MAP & INFO */}
-      <section id="contact" className="py-24 bg-slate-50 relative border-t-8 border-indigo-100">
+      <section id="contact" className="py-24 bg-slate-50 relative border-t-8 border-indigo-100 bg-dot-pattern">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col gap-3">
@@ -543,16 +546,18 @@ export default function Home() {
           </div>
 
           {/* Real Interactive Google Map - Full Width */}
-          <div className="mt-12 w-full rounded-[32px] overflow-hidden border-4 border-slate-200 shadow-md h-[400px]">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110543.0850239644!2d79.37894200632349!3d29.382877960350757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0a1bc28fd9d61%3A0x7cae7ba916987db3!2sNainital%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1714545021200!5m2!1sen!2sin"
-              className="w-full h-full border-0"
-              allowFullScreen={false}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Naincy Career School Location Map"
-            ></iframe>
-          </div>
+          <RevealOnScroll delay={300}>
+            <div className="mt-12 w-full rounded-[32px] overflow-hidden border-4 border-slate-200 shadow-md h-[400px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110543.0850239644!2d79.37894200632349!3d29.382877960350757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0a1bc28fd9d61%3A0x7cae7ba916987db3!2sNainital%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1714545021200!5m2!1sen!2sin"
+                className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700"
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Naincy Career School Location Map"
+              ></iframe>
+            </div>
+          </RevealOnScroll>
 
         </div>
       </section>

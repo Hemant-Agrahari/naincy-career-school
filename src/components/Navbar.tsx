@@ -1,17 +1,18 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import Mascot from "./Mascot";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#hero" },
-    { name: "Curriculum", href: "#academics" },
-    { name: "Career Zone", href: "#careers" },
-    { name: "Admissions", href: "#admissions" },
-    { name: "Contact Us", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Academics", href: "/academics" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Admissions", href: "/admissions" },
   ];
 
   return (
@@ -20,7 +21,7 @@ export default function Navbar() {
         <div className="flex h-20 items-center justify-between">
           
           {/* Logo Section */}
-          <a href="#hero" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-3 group">
             <Mascot width={55} height={55} interactive={false} className="group-hover:rotate-12 transition-transform duration-300" />
             <div className="flex flex-col">
               <span className="font-header text-xl sm:text-2xl font-extrabold tracking-tight text-indigo-600 group-hover:text-pink-500 transition-colors">
@@ -30,25 +31,25 @@ export default function Navbar() {
                 Career School
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="font-header text-base font-bold text-slate-600 hover:text-indigo-600 hover:scale-110 active:scale-95 transition-all duration-200 px-3 py-2 rounded-full hover:bg-indigo-50"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#admissions"
+            <Link
+              href="/admissions"
               className="playful-btn bg-pink-500 hover:bg-pink-600 text-white font-header font-bold text-sm px-6 py-2.5 rounded-full"
             >
               Enroll Now! 🚀
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -86,23 +87,23 @@ export default function Navbar() {
       >
         <div className="space-y-2 px-4 py-4">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
               onClick={() => setIsOpen(false)}
               className="block rounded-lg px-4 py-3 text-base font-bold text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
           <div className="pt-2">
-            <a
-              href="#admissions"
+            <Link
+              href="/admissions"
               onClick={() => setIsOpen(false)}
               className="block w-full text-center playful-btn bg-pink-500 hover:bg-pink-600 text-white font-header font-bold text-base px-6 py-3 rounded-full"
             >
               Enroll Now! 🚀
-            </a>
+            </Link>
           </div>
         </div>
       </div>
