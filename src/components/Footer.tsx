@@ -81,34 +81,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-center gap-4">
           <p className="text-xs text-slate-400 font-body">
             &copy; {currentYear} Naincy Career School. All rights reserved.
           </p>
-          <div className="flex gap-4">
-            {/* Playful bouncing social buttons */}
-            <a
-              href="#"
-              className="w-8 h-8 rounded-full bg-indigo-600 hover:bg-indigo-500 hover:scale-125 transition-all duration-200 flex items-center justify-center text-white"
-              title="Facebook"
-            >
-              f
-            </a>
-            <a
-              href="#"
-              className="w-8 h-8 rounded-full bg-sky-500 hover:bg-sky-400 hover:scale-125 transition-all duration-200 flex items-center justify-center text-white"
-              title="Twitter"
-            >
-              t
-            </a>
-            <a
-              href="#"
-              className="w-8 h-8 rounded-full bg-pink-600 hover:bg-pink-500 hover:scale-125 transition-all duration-200 flex items-center justify-center text-white"
-              title="Instagram"
-            >
-              i
-            </a>
-          </div>
         </div>
       </div>
     </footer>
