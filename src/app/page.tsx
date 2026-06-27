@@ -446,7 +446,7 @@ export default function Home() {
 
       {/* TESTIMONIALS */}
       <section className="py-24 bg-white relative">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 flex flex-col gap-2">
             <span className="text-pink-500 text-lg font-bold tracking-widest uppercase">Testimonials</span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-indigo-950">
